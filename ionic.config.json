@@ -1,0 +1,7 @@
+{
+  "name": "zenware-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

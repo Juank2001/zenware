@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title align="center">Project Status</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-card *ngFor="let employee of employees" (click)="user(employee.id)">
+    <ion-card-header>
+      <ion-card-subtitle color="success">Approved</ion-card-subtitle>
+      <ion-card-title>{{employee.employee_name}}</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ion-avatar slot="start" *ngIf="employee.employee_age < 30">
+        <img src="../../../assets/joven.jpg" />
+      </ion-avatar>
+      <ion-avatar slot="start"*ngIf="employee.employee_age >= 30">
+        <img src="../../../assets/viejo.jpg" />
+      </ion-avatar>
+
+
+      <ion-card-content>
+        Salary: {{employee.employee_salary}}
+      </ion-card-content>
+    </ion-item>
+
+  </ion-card>
+
+</ion-content>

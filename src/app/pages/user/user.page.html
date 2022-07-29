@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-segment value="user">
+      <ion-segment-button value="user">User profile</ion-segment-button>
+      <ion-segment-button value="Preferences">Preferences</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+
+  <div *ngIf="employee">
+    <ion-item lines="none" style="margin-top: 3%;">
+      <img src="../../../assets/joven.jpg" *ngIf="employee.employee_age < 30" />
+      <img src="../../../assets/viejo.jpg" *ngIf="employee.employee_age >= 30" />
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>
+        <p>Full Name</p>
+        <h2>{{employee.employee_name}}</h2>
+      </ion-label>
+
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>
+        <p>Designation</p>
+        <h2>Homeopathy researcher</h2>
+      </ion-label>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>
+        <p>Phone no.</p>
+        <h2>+123 456 7890</h2>
+      </ion-label>
+    </ion-item>
+
+      <div class="row p-4">
+        <div class="col-6">
+          <ion-button expand="block" fill="outline">Edit profile</ion-button>
+        </div>
+        <div class="col-6">
+          <ion-button expand="block" >Save changes</ion-button>
+        </div>
+      </div>
+  </div>
+
+</ion-content>
